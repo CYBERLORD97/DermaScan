@@ -1,8 +1,8 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/app-c47ww49mxkht
+# Welcome to DermaScan
+Application Link URL
+    URL:https://app-c47ww49mxkht.appmedo.com/
 
-# Welcome to Your Miaoda Project
+
 
 ## Project Info
 
