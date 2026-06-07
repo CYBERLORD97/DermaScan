@@ -1,4 +1,4 @@
-#  DermaScan AI
+#  DermaScan
 
 **AI-Powered Skin Health & Disease Detection Platform**
 
