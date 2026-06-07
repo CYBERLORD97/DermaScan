@@ -1,0 +1,336 @@
+const pcm = {
+  // Nav
+  nav: {
+    home: 'Home',
+    scan: 'Scan',
+    history: 'Scan History',
+    chat_history: 'Chat History',
+    about: 'About',
+    profile: 'Profile',
+    login: 'Login',
+    register: 'Register',
+    logout: 'Logout',
+  },
+
+  // Common
+  common: {
+    back_home: 'Go Back Home',
+    back_results: 'Go Back to Results',
+    start_scan: 'Start Scan',
+    analyze_another: 'Analyze Another Photo',
+    no_result: 'No analysis result dey.',
+    new_scan: 'Start New Scan',
+    medical_disclaimer: 'Medical Disclaimer',
+    disclaimer_text:
+      'DermaScan na information tool. E no replace real doctor diagnosis or treatment. Always go see proper dermatologist or healthcare provider before you start any medicine.',
+    not_substitute: 'E no replace professional medical advice. Always go see dermatologist.',
+    saving: 'Dey save…',
+    save: 'Save Changes',
+    cancel: 'Cancel',
+    loading: 'Loading…',
+  },
+
+  // Home
+  home: {
+    hero_title: 'DermaScan',
+    hero_subtitle: 'Snap photo or describe your skin — get AI analysis sharp sharp.',
+    start_scan: 'Start Skin Scan',
+    new_scan: 'New Scan',
+    new_scan_sub: 'Photo or text',
+    history: 'History',
+    history_sub: 'Past analyses',
+    book_appointment: 'Book Appointment',
+    book_appointment_sub: 'See skin doctor direct',
+    why_title: 'Why DermaScan?',
+    feature_instant: 'Sharp Sharp Analysis',
+    feature_instant_desc: 'AI result dey come in seconds from any photo.',
+    feature_trusted: 'Trusted Accuracy',
+    feature_trusted_desc: 'Trained on dermatology data for reliable detection.',
+    feature_nigerian: 'Naija Market',
+    feature_nigerian_desc: 'Medicine prices and availability for Naija pharmacies.',
+    cta_title: 'Get full access',
+    cta_sub: 'Sign in to save your scan history',
+    sign_up: 'Sign Up',
+  },
+
+  // Login
+  login: {
+    welcome: 'Welcome Back',
+    subtitle: 'Sign in to your DermaScan account',
+    email: 'Email',
+    email_placeholder: 'Enter your email',
+    password: 'Password',
+    password_placeholder: 'Enter your password',
+    submit: 'Sign In',
+    no_account: 'You never get account?',
+    register_link: 'Register',
+    error_fields: 'Abeg enter your email and password',
+    error_invalid: 'Email or password no correct',
+    success: 'Login successful',
+  },
+
+  // Register
+  register: {
+    title: 'Create Account',
+    subtitle: 'Join DermaScan to start checking your skin',
+    full_name: 'Full Name',
+    full_name_placeholder: 'Enter your full name',
+    email: 'Email',
+    email_placeholder: 'Enter your email',
+    password: 'Password',
+    password_placeholder: 'Create password',
+    confirm_password: 'Confirm Password',
+    confirm_placeholder: 'Confirm your password',
+    terms_prefix: 'I agree to the',
+    terms_agreement: 'User Agreement',
+    terms_and: 'and',
+    terms_privacy: 'Privacy Policy',
+    submit: 'Create Account',
+    have_account: 'You don get account before?',
+    sign_in: 'Sign In',
+    error_fields: 'Abeg fill all the fields',
+    error_match: 'Password no match',
+    error_terms: 'You must agree to the terms',
+    success: 'Account don create successfully',
+  },
+
+  // Photo Input
+  photo: {
+    title: 'Skin Analysis',
+    subtitle: 'Upload photo or describe your symptoms',
+    tab_photo: 'Photo',
+    tab_describe: 'Describe',
+    click_drag: 'Click or drag to upload',
+    format_hint: 'JPEG, PNG, WEBP up to 5 MB',
+    or: 'OR',
+    open_camera: 'Take Photo',
+    choose_gallery: 'Choose from Gallery',
+    optional_label: 'Optional: describe your symptoms for better result (any language)',
+    optional_placeholder: 'e.g. Red patch dey itch for my forearm since 3 days — or write in Pidgin, Yoruba, Igbo, or Hausa…',
+    describe_label: 'Describe your skin condition',
+    describe_placeholder:
+      'e.g. One round scaly patch dey my left hand, e dey raise small, e dey itch. E show about one week ago and e dey grow…',
+    describe_hint:
+      'You fit write in Pidgin, English, Yoruba, Igbo, or Hausa. Include: where e dey, how e look, how long, symptoms (itch/pain/burning), wetin cause am if you know.',
+    analyze_photo: 'Analyze Photo',
+    analyze_desc: 'Analyze Description',
+    error_format: 'Format no supported. Abeg use JPEG, PNG, WEBP, GIF, or AVIF.',
+    error_size: 'File too big. Maximum size na 5 MB.',
+    error_empty: 'Abeg upload photo or describe your condition.',
+    error_analysis: 'Analysis fail. Abeg try again.',
+    error_rate_limit: 'Too many requests. Abeg wait small then try again.',
+  },
+
+  // Processing overlay
+  processing: {
+    uploading: 'Dey upload photo…',
+    analyzing: 'AI dey analyze…',
+    generating: 'Dey generate recommendations…',
+    preparing: 'Dey prepare your analysis…',
+    step_upload: 'Dey upload photo',
+    step_analyze: 'AI dey analyze',
+    step_recommend: 'Dey generate recommendations',
+    step_reading: 'Dey read your description',
+    step_identify: 'Dey identify condition',
+    step_almost: 'Almost done…',
+    footer_image: 'E fit take up to 30 seconds',
+    footer_text: 'Dey analyze your description…',
+  },
+
+  // Analysis Results
+  results: {
+    label: 'Analysis Result',
+    severity_suffix: 'Severity',
+    low_confidence: 'Low Confidence',
+    confidence_label: 'AI Confidence Score',
+    important_notice: 'Important Notice',
+    next_steps: 'Next Steps',
+    treatment_title: 'Treatment Recommendations',
+    medication_title: 'Medication Recommendations',
+    ai_disclaimer: 'This analysis na AI-generated and e no replace professional medical advice.',
+    highly_effective: 'Very Effective',
+    effective: 'Effective',
+    less_effective: 'Less Effective',
+    cheap: 'Cheap',
+    affordable: 'Affordable',
+    expensive: 'Expensive',
+  },
+
+  // Audio diagnosis
+  audio: {
+    title: 'Listen to Diagnosis',
+    listen: 'Listen',
+    generating: 'Dey generate…',
+    regenerate: 'Regenerate',
+    restart: 'Restart',
+    playing_in: 'Playing in',
+    error_generate: 'Audio generation fail. Abeg try again.',
+  },
+
+  // Medication Details
+  medication: {
+    label: 'Medicine',
+    effectiveness: 'Effectiveness',
+    price_nigeria: 'Price (Naija)',
+    description: 'Description',
+    no_medication: 'No medicine don select.',
+    disclaimer_body:
+      'Always go see qualified healthcare provider before you start any medicine. Prices na estimate for Naija pharmacy market and e fit change.',
+  },
+
+  // History
+  history: {
+    title: 'Analysis History',
+    empty: 'No analysis history yet.',
+    first_scan: 'Start Your First Scan',
+    unknown: 'Unknown Condition',
+    low_badge: 'Low',
+    failed: 'History no load',
+  },
+
+  // About
+  about: {
+    title: 'About DermaScan',
+    how_title: 'How E Work',
+    how_content:
+      'DermaScan dey use multimodal AI to analyze skin condition photos. Just upload or snap clear photo of the affected area, and our AI go identify the most likely condition, check severity, and suggest treatment steps and medicines wey dey available for Naija pharmacy market.',
+    price_title: 'Medicine Prices',
+    price_content:
+      'All medicine prices dey show in Nigerian Naira (₦) and na approximate ranges based on typical pharmacy prices for Nigeria. Prices fit vary by location, pharmacy, brand, and availability. Always verify current prices with your local pharmacist.',
+    privacy_title: 'Privacy',
+    privacy_content:
+      'Your uploaded photos dey stored securely for encrypted cloud storage and only you fit access am. We no share your images or analysis results with third parties. You fit request to delete your data anytime.',
+    disclaimer_body:
+      'DermaScan na information tool and e no replace professional medical diagnosis or treatment. AI-generated results na estimates and e fit be wrong. Always go see qualified dermatologist or healthcare provider before you start any medicine or treatment. If you dey experience serious symptoms, go hospital immediately.',
+    copyright: 'DermaScan. Built for Naija market.',
+  },
+
+  // Profile
+  profile: {
+    title: 'My Profile',
+    subtitle: 'Manage your account and preferences',
+    display_name: 'Display Name',
+    display_name_placeholder: 'Enter your display name',
+    email: 'Email',
+    email_placeholder: 'Enter your email',
+    member_since: 'Member Since',
+    language: 'App Language',
+    change_avatar: 'Change Avatar',
+    save: 'Save Changes',
+    sign_out: 'Sign Out',
+    success: 'Profile don update successfully',
+    error: 'Profile update fail',
+    section_account: 'Account Info',
+    section_preferences: 'Preferences',
+  },
+
+  // Language names
+  language: {
+    en: 'English',
+    yo: 'Yoruba',
+    ig: 'Igbo',
+    ha: 'Hausa',
+    pcm: 'Pidgin',
+  },
+
+  // Chat & Dermatologist
+  chat: {
+    title: 'Chat with AI',
+    subtitle: 'Ask questions about your skin condition and get expert advice',
+    placeholder: 'Ask about your condition…',
+    send: 'Send',
+    thinking: 'AI dey think…',
+    connect_derm: 'Connect to Real Dermatologist',
+    book_appointment: 'Book Appointment',
+    error: 'Message no send. Abeg try again.',
+    disclaimer: 'This na AI chatbot. E no replace real doctor.',
+    empty_prompt: 'Abeg type message first',
+    welcome_context: 'Hello {{name}}! I know about your skin condition. Wetin you want ask?',
+    welcome_general: 'Hello {{name}}, wetin I fit do for you today?',
+  },
+
+  // Dermatologist Booking
+  booking: {
+    title: 'Book Appointment',
+    subtitle: 'Choose dermatologist and pick appointment time',
+    select_derm: 'Choose Dermatologist',
+    select_date: 'Choose Date',
+    select_time: 'Choose Time',
+    consultation_fee: 'Consultation Fee',
+    book_now: 'Book & Pay Now',
+    processing: 'Dey process payment…',
+    success_title: 'Appointment Done!',
+    success_body: 'Your appointment don book. We go send confirmation to your email.',
+    cancel: 'Cancel',
+    back: 'Go Back',
+    available: 'Available',
+    unavailable: 'No Available',
+    experience: 'Experience',
+    specialization: 'Specialization',
+    error_select: 'Abeg select date and time',
+    pay_stripe: 'Pay with Card (Stripe)',
+    pay_paystack: 'Pay with Paystack',
+    years: 'years',
+  },
+
+  // Payment
+  payment: {
+    success_title: 'Payment Successful!',
+    success_body: 'Your appointment don confirm. Check your email for details.',
+    failed_title: 'Payment Fail',
+    failed_body: 'Payment no go through. Abeg try again.',
+    verifying: 'Dey verify payment…',
+    view_appointments: 'View My Appointments',
+    new_scan: 'Do New Scan',
+  },
+
+  appointments: {
+    title: 'My Appointments',
+    subtitle: 'See and manage your doctor appointments',
+    empty: 'You never book appointment yet.',
+    empty_desc: 'Book to see skin doctor.',
+    book_now: 'Book Appointment',
+    status_pending_payment: 'Dey Wait Payment',
+    status_confirmed: 'Confirmed',
+    status_cancelled: 'Cancelled',
+    status_completed: 'Completed',
+    cancel_btn: 'Cancel',
+    cancel_confirm: 'You sure say you want cancel dis appointment?',
+    cancel_success: 'Appointment don cancel.',
+    cancel_error: 'Appointment no cancel. Abeg try again.',
+    load_error: 'No fit load appointments.',
+    date_label: 'Date',
+    time_label: 'Time',
+    fee_label: 'Fee',
+    derm_label: 'Doctor',
+    reschedule_btn: 'Reschedule',
+    reschedule_title: 'Reschedule Appointment',
+    reschedule_desc: 'Select new date and time for your appointment.',
+    reschedule_success: 'Appointment don reschedule.',
+    reschedule_error: 'Appointment no reschedule. Abeg try again.',
+    notification_title: 'Appointment Update',
+    notification_desc: 'Your appointment status don change to {{status}}.',
+  },
+
+  chat_history: {
+    title: 'Chat History',
+    subtitle: 'Your old AI doctor chats',
+    empty: 'No old chats yet.',
+    empty_desc: 'Ask questions about your skin condition make our AI give you advice.',
+    start_chat: 'Start Chat',
+    view_thread: 'View',
+    continue: 'Continue',
+    continue_chat: 'Continue',
+    thread_title: 'Conversation',
+    back: 'Back to Profile',
+    messages_label: 'messages',
+    condition_label: 'Condition',
+    delete_session: 'Delete',
+    delete_confirm: 'Delete dis conversation?',
+    deleted: 'Chat don delete',
+    delete_error: 'Chat no gree delete',
+    delete_success: 'Conversation don delete.',
+  },
+};
+
+export default pcm;
